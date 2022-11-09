@@ -315,7 +315,7 @@ class ReadMoreTextState extends State<ReadMoreText> {
     ValueChanged<String>? onPressed,
     required List<TextSpan> children,
   }) {
-    RegExp exp = widget.linkRegExp ?? RegExp(r'(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+');
+    RegExp exp = widget.linkRegExp ?? RegExp(r"((https?:www\.)|(https?:\/\/)|(www\.)|(ftp?:\/\/))[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9]{1,6}(\/[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)?");
 
     List<TextSpan> contents = [];
 
